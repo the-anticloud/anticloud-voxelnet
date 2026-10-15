@@ -1,0 +1,16 @@
+{
+ "framework": "26_TRL_ML",
+ "title": "ML TRL (TRL-ML scale 1-9)",
+ "project": "VOXELNET",
+ "basis": [
+  {
+   "check": "16_ml_trl",
+   "status": "PASS",
+   "observed": "trl=8 satisfied=8/8 missing=[]"
+  }
+ ],
+ "verdict": "CONTROLS EVIDENCED \u2014 all basis checks PASS",
+ "pax_provenance": "Run ID loiskleinner/pax-benchmark-runner v3, 2026-10-02, Kaggle T4 x2 (2x 16GB VRAM), Ubuntu 22.04, Python 3.12. These are PAX L5 Narrow L2 General 27B model-level results \u2014 shared model component, not this project's verdict.",
+ "bench_sha3": "992d232be2ead0c7f5577ce8af14a20363d634dc92ba60286344707e921e8ec9",
+ "register_sha3": "01a8601e5f7522c8e1290665d01fae3b20d1611fbb0a022d5c41c3afee8b2217"
+}

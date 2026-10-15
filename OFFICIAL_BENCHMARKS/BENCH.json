@@ -1,0 +1,229 @@
+{
+  "schema": "anticloud.tier-bench/1",
+  "project": "VOXELNET",
+  "source": {
+    "repo_path": "E:\\fenta\\Downloads\\The Anticloud\\ANTICLOUD_REPOS\\VOXELIZATION\\VOXELNET\\UPSTREAM_CLONE",
+    "git": {
+      "head": "",
+      "url": "https://github.com/the-anticloud/OPENMRS_CORE.git",
+      "branch": "master",
+      "committed_at": "2026-09-29T11:06:59+04:00"
+    }
+  },
+  "metrics": {
+    "files_total": 21,
+    "source_files_scanned": 17,
+    "lines_of_code": 12728,
+    "languages": {
+      ".py": 16,
+      "(none)": 2,
+      ".md": 1,
+      ".c": 1,
+      ".pyx": 1
+    }
+  },
+  "licence": {
+    "spdx": "MIT",
+    "class": "A",
+    "source_file": "LICENSE",
+    "redistribution_allowed": true
+  },
+  "dependencies": {
+    "count": 0,
+    "unique": 0,
+    "by_ecosystem": {},
+    "list": []
+  },
+  "owasp_top10": {
+    "total_findings": 7,
+    "files_with_findings": 6,
+    "severity": {
+      "high": 3,
+      "medium": 0,
+      "low": 4
+    },
+    "categories": {
+      "A01-BrokenAccessControl": {
+        "count": 0,
+        "findings": []
+      },
+      "A02-CryptographicFailures": {
+        "count": 0,
+        "findings": []
+      },
+      "A03-Injection": {
+        "count": 3,
+        "findings": [
+          {
+            "severity": "high",
+            "file": "train.py",
+            "line": 91,
+            "cwe": "CWE-95",
+            "snippet": "while model.epoch.eval() < args.max_epoch:"
+          },
+          {
+            "severity": "high",
+            "file": "train_hook.py",
+            "line": 20,
+            "cwe": "CWE-502",
+            "snippet": "s = pickle.load(open(tag + '.pause.pkl', 'rb'))"
+          },
+          {
+            "severity": "high",
+            "file": "utils/box_overlaps.c",
+            "line": 665,
+            "cwe": "CWE-120",
+            "snippet": "strcpy(__PYX_DEFAULT_STRING_ENCODING, default_encoding_c);"
+          }
+        ]
+      },
+      "A04-InsecureDesign": {
+        "count": 4,
+        "findings": [
+          {
+            "severity": "low",
+            "file": "train.py",
+            "line": 42,
+            "cwe": "CWE-",
+            "snippet": "# TODO: split file support"
+          },
+          {
+            "severity": "low",
+            "file": "utils/data_aug.py",
+            "line": 41,
+            "cwe": "CWE-",
+            "snippet": "# TODO: precisely gather the point"
+          },
+          {
+            "severity": "low",
+            "file": "utils/utils.py",
+            "line": 22,
+            "cwe": "CWE-",
+            "snippet": "# using the cfg.INPUT_XXX"
+          },
+          {
+            "severity": "low",
+            "file": "model/model.py",
+            "line": 106,
+            "cwe": "CWE-",
+            "snippet": "# self.xxxloss is only the loss for the lowest tower"
+          }
+        ]
+      },
+      "A05-SecurityMisconfiguration": {
+        "count": 0,
+        "findings": []
+      },
+      "A06-VulnerableComponents": {
+        "count": 0,
+        "findings": []
+      },
+      "A07-AuthFailures": {
+        "count": 0,
+        "findings": []
+      },
+      "A08-SoftwareDataIntegrity": {
+        "count": 0,
+        "findings": []
+      },
+      "A09-LoggingMonitoringFailures": {
+        "count": 0,
+        "findings": []
+      },
+      "A10-SSRF": {
+        "count": 0,
+        "findings": []
+      }
+    }
+  },
+  "owasp_llm_top10": {
+    "total_findings": 0,
+    "files_with_findings": 0,
+    "severity": {
+      "high": 0,
+      "medium": 0,
+      "low": 0
+    },
+    "categories": {
+      "LLM01-PromptInjection": {
+        "count": 0,
+        "findings": []
+      },
+      "LLM02-SensitiveInfoDisclosure": {
+        "count": 0,
+        "findings": []
+      },
+      "LLM03-SupplyChain": {
+        "count": 0,
+        "findings": []
+      },
+      "LLM04-DataPoisoning": {
+        "count": 0,
+        "findings": []
+      },
+      "LLM05-ImproperOutputHandling": {
+        "count": 0,
+        "findings": []
+      },
+      "LLM06-ExcessiveAgency": {
+        "count": 0,
+        "findings": []
+      },
+      "LLM07-SystemPromptLeak": {
+        "count": 0,
+        "findings": []
+      },
+      "LLM08-VectorEmbeddingWeaknesses": {
+        "count": 0,
+        "findings": []
+      },
+      "LLM09-Misinformation": {
+        "count": 0,
+        "findings": []
+      },
+      "LLM10-UnboundedConsumption": {
+        "count": 0,
+        "findings": []
+      }
+    }
+  },
+  "sbom": {
+    "bomFormat": "CycloneDX",
+    "specVersion": "1.5",
+    "serialNumber": "urn:uuid:c6210783-20cc-5d7e-a1ee-f141c4dc56a1",
+    "version": 1,
+    "metadata": {
+      "timestamp": "2026-10-06T05:55:00Z",
+      "component": {
+        "type": "application",
+        "name": "VOXELNET",
+        "version": "83b357604d34",
+        "bom-ref": "pkg:generic/anticloud/VOXELNET@83b357604d34",
+        "purl": "pkg:generic/anticloud/VOXELNET@83b357604d34",
+        "licenses": [
+          {
+            "license": {
+              "id": "MIT"
+            }
+          }
+        ]
+      },
+      "properties": [
+        {
+          "name": "anticloud:source-commit",
+          "value": ""
+        },
+        {
+          "name": "anticloud:source-url",
+          "value": "https://github.com/the-anticloud/OPENMRS_CORE.git"
+        },
+        {
+          "name": "anticloud:tier",
+          "value": "tier-agent"
+        }
+      ]
+    },
+    "components": []
+  },
+  "elapsed_seconds": 1.27
+}
